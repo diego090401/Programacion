@@ -26,7 +26,8 @@ def Login(Users): #Esta es una funcion para el momento en el que el usuario teng
     log = input("Ingrese su usuario: ")
     for i in range(len(Users)):
         if Users[i]["Userkey"] == log :
-            id = i 
+            Userid = i 
+            
             found = True
     if found == True:
         
@@ -47,26 +48,26 @@ def Update(Users): #Funcion para que el usuario pueda actualizar sus clave
     access = Login(Users)
     if access  == True:
         NewPassworKey = input("Ingrese su nueva clave: ")
-        Users[id]["passwordkey"] = NewPassworKey
+        Users[Userid]["passwordkey"] = NewPassworKey
         
         
 
-def Compro(par, Status):
+def Compro(par):
 
     if par == "s" or par =="n":
         pass
     else:
         print("No ha ingresado ninguna de las opciones, intente de nuevo")
         exit()
-Id = 0
-Users = []
-Status = 1 
+Userid = 0
+Users = [{"Userkey": "Prueba", "passwordkey" : "1234" }]
+
 def run():
-    while Status == 1 :
+    while True :
         
         Eleccion = input("Desea ingresar un usuario nuevo(s o n) ? ")
         Eleccion.lower()
-        Compro(Eleccion, Status)
+        Compro(Eleccion)
         if Eleccion == "s":
             InsertUser(Users )
             
@@ -74,21 +75,21 @@ def run():
         
         Eleccion = input("Desea ingresar a su cuenta (s o n) ? ")
         Eleccion.lower()
-        Compro(Eleccion, Status)
+        Compro(Eleccion)
         if Eleccion == "s":
                 Login(Users)
 
         
         Eleccion = input("Desea actualizar su clave (s o n) ? ")
         Eleccion.lower()
-        Compro(Eleccion, Status)
+        Compro(Eleccion)
         if Eleccion == "s":
             Update(Users)
 
             
         Eleccion = input("Desea volver al inicio (s o n) ? ")
         Eleccion.lower()
-        Compro(Eleccion, Status)
+        Compro(Eleccion)
         if Eleccion == "s":
             print (Users)
         else:
