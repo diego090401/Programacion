@@ -22,7 +22,7 @@ def InsertUser(Users):
     
 def Login(Users):
     print(Users)
-  
+
 
 def Update(Users):
     pass
