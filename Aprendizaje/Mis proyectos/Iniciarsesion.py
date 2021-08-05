@@ -74,6 +74,15 @@ def run():
         Compro(Eleccion, Status)
         if Eleccion == "s":
             Update(Users)
+
+            
+        Eleccion = input("Desea volver al inicio (s o n) ? ")
+        Eleccion.lower()
+        Compro(Eleccion, Status)
+        if Eleccion == "s":
+            pass
+        else:
+            exit()
     
 
 if __name__ == '__main__' :
