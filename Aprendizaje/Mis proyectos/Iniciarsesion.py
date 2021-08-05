@@ -20,14 +20,24 @@ def InsertUser(Users): # Funcio para que las personas puedan ingresear un nuevo 
         Users.append(User)
         print(User)
     
-def Login(Users): #Esta es una funcio para el momento en el que el usuario tenga que iniciar sesio
+def Login(Users): #Esta es una funcion para el momento en el que el usuario tenga que iniciar sesio
+    found = False
     indice = 0 
     log = input("Ingrese su usuario: ")
     for i in range(len(Users)):
         if Users[i]["Userkey"] == log :
             indice = i
-            print("Si sirvio")
-            
+            found = True
+    if found == True:
+        
+        password = input("Ingrese su clave: ")      
+        if Users[i]["passwordkey"] == password:
+            print("Ha ingresado con exito")
+        else:
+            print("Clave incorrecta")
+    else:
+        print("El usuario no existe")
+
     
 
 
@@ -46,23 +56,23 @@ Users = []
 Status = 1 
 def run():
     while Status == 1 :
-        print("Desea ingresar un usuario nuevo(s o n): ")
-        Eleccion = input()
+        
+        Eleccion = input("Desea ingresar un usuario nuevo(s o n) ? ")
         Eleccion.lower()
         Compro(Eleccion, Status)
         if Eleccion == "s":
             InsertUser(Users)
             
         
-        print("Desea ingresar a su cuenta (s o n)")
-        Eleccion = input()
+        
+        Eleccion = input("Desea ingresar a su cuenta (s o n) ? ")
         Eleccion.lower()
         Compro(Eleccion, Status)
         if Eleccion == "s":
                 Login(Users)
 
-        print("Desea actualizar los datos de su cuenta ?")
-        Eleccion = input()
+        
+        Eleccion = input("Desea actualizar los datos de su cuenta (s o n) ? ")
         Eleccion.lower()
         Compro(Eleccion, Status)
         if Eleccion == "s":
