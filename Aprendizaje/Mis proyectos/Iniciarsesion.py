@@ -18,10 +18,16 @@ def InsertUser(Users):
             exit()
         User = dict(Userkey = Username, passwordkey = password)
         Users.append(User)
-        print(Users)
+        print(User)
     
 def Login(Users):
-    print(Users)
+    indice = 0 
+    log = input("Ingrese su usuario: ")
+    for i in range(len(Users)):
+        if Users[i]["Userkey"] == log :
+            indice = i
+            print(Users[i]["Userkey"])
+    
 
 
 def Update(Users):
@@ -29,7 +35,7 @@ def Update(Users):
 
 def Compro(par, Status):
 
-    if par == "si" or par =="no":
+    if par == "s" or par =="n":
         pass
     else:
         print("No ha ingresado ninguna de las opciones, intente de nuevo")
@@ -39,7 +45,7 @@ Users = []
 Status = 1 
 def run():
     while Status == 1 :
-        print("Desea ingresar un usuario nuevo(si o no): ")
+        print("Desea ingresar un usuario nuevo(s o n): ")
         Eleccion = input()
         Eleccion.lower()
         Compro(Eleccion, Status)
@@ -47,18 +53,18 @@ def run():
             InsertUser(Users)
             # Esto es una prueba
         
-        print("Desea ingresar a su cuenta (si o no)")
+        print("Desea ingresar a su cuenta (s o n)")
         Eleccion = input()
         Eleccion.lower()
         Compro(Eleccion, Status)
-        if Eleccion == "si":
+        if Eleccion == "s":
                 Login(Users)
 
         print("Desea actualizar los datos de su cuenta ?")
         Eleccion = input()
         Eleccion.lower()
         Compro(Eleccion, Status)
-        if Eleccion == "si":
+        if Eleccion == "s":
             Update(Users)
     
 
