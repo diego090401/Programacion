@@ -20,7 +20,7 @@ def InsertUser(Users): # Funcio para que las personas puedan ingresear un nuevo 
         Users.append(User)
         print(User)
     
-def Login(Users): #Esta es una funcion para el momento en el que el usuario tenga que iniciar sesio
+def Login(Users): #Esta es una funcion para el momento en el que el usuario tenga que iniciar sesion
     found = False
     indice = 0 
     log = input("Ingrese su usuario: ")
@@ -37,9 +37,6 @@ def Login(Users): #Esta es una funcion para el momento en el que el usuario teng
             print("Clave incorrecta")
     else:
         print("El usuario no existe")
-
-    
-
 
 def Update(Users): #Funcion para que el usuario pueda actualizar sus datos
     pass
