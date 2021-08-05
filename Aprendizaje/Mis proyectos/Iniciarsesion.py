@@ -1,14 +1,14 @@
-def InsertUser(Users):
+def InsertUser(Users): # Funcio para que las personas puedan ingresear un nuevo usuario
     
     UserCount = input("Cuantos usuarios quieres ingresar: ")
     
-    try:
+    try: #Asegurandose que el usuario solo digite numeros
         UserCount == int(UserCount)
     except:
         print( "El valor ingresado no es un numero")
         exit()
     UserCount = int(UserCount)
-    for i in range (UserCount): 
+    for i in range (UserCount): # Loop para crear la cantidad de usuarios deseada
         Username = str(input("Ingrese el nombre de su nuevo usuario: "))
         password = str(input("Ingrese su clave: "))
         try: 
@@ -20,17 +20,17 @@ def InsertUser(Users):
         Users.append(User)
         print(User)
     
-def Login(Users):
+def Login(Users): #Esta es una funcio para el momento en el que el usuario tenga que iniciar sesio
     indice = 0 
     log = input("Ingrese su usuario: ")
     for i in range(len(Users)):
         if Users[i]["Userkey"] == log :
             indice = i
-            print(Users[i]["Userkey"])
+            print("Si sirvio")
     
 
 
-def Update(Users):
+def Update(Users): #Funcio para que el usuario pueda actualizar sus datos
     pass
 
 def Compro(par, Status):
@@ -49,9 +49,9 @@ def run():
         Eleccion = input()
         Eleccion.lower()
         Compro(Eleccion, Status)
-        if Eleccion == "si":
+        if Eleccion == "s":
             InsertUser(Users)
-            # Esto es una prueba
+            
         
         print("Desea ingresar a su cuenta (s o n)")
         Eleccion = input()
