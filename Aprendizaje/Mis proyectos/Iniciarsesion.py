@@ -45,6 +45,7 @@ def run():
         Compro(Eleccion, Status)
         if Eleccion == "si":
             InsertUser(Users)
+            # Esto es una prueba
         
         print("Desea ingresar a su cuenta (si o no)")
         Eleccion = input()
