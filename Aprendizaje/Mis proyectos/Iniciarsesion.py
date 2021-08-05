@@ -27,10 +27,11 @@ def Login(Users): #Esta es una funcio para el momento en el que el usuario tenga
         if Users[i]["Userkey"] == log :
             indice = i
             print("Si sirvio")
+            
     
 
 
-def Update(Users): #Funcio para que el usuario pueda actualizar sus datos
+def Update(Users): #Funcion para que el usuario pueda actualizar sus datos
     pass
 
 def Compro(par, Status):
