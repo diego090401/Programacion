@@ -50,8 +50,6 @@ def Update(Users): #Funcion para que el usuario pueda actualizar sus clave
         NewPassworKey = input("Ingrese su nueva clave: ")
         Users[Userid]["passwordkey"] = NewPassworKey
         
-        
-
 def Compro(par):
 
     if par == "s" or par =="n":
