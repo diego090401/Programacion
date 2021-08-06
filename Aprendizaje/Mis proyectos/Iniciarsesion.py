@@ -1,3 +1,4 @@
+#Esto es una prueba para hacer commit desde otra compu
 def InsertUser(Users): # Funcio para que las personas puedan ingresear un nuevo usuario
     
     UserCount = input("Cuantos usuarios quieres ingresar: ")
