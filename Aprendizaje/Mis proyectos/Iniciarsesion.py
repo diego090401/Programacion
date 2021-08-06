@@ -28,6 +28,10 @@ def InsertManyUsers(): # Funcion para que las personas puedan ingresear un nuevo
     
 def InsertUser():
         Username = str(input("Ingrese el nombre de su nuevo usuario: "))
+        for i in range(len(Users)):
+            if Users[i]["Userkey"]== Username:
+                print("El usuario ya existe")
+                exit()
         password = str(input("Ingrese su clave: "))
         try: 
             password = input("Ingrese su clave de nuevo: ")
