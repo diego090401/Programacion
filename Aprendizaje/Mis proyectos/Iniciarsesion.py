@@ -25,7 +25,6 @@ def InsertManyUsers(): # Funcion para que las personas puedan ingresear un nuevo
             print("Las claves no coiciden, por favor intente de nuevo")
             exit()
 
-    
 def InsertUser():
         Username = str(input("Ingrese el nombre de su nuevo usuario: "))
         for i in range(len(Users)):
@@ -34,7 +33,7 @@ def InsertUser():
                 exit()
         password = str(input("Ingrese su clave: "))
         try: 
-            password = input("Ingrese su clave de nuevo: ")
+            password == input("Ingrese su clave de nuevo: ")
         except:
             print("Las claves no coiciden, por favor intente de nuevo")
             exit()
@@ -63,9 +62,6 @@ def Login(): #Esta es una funcion para el momento en el que el usuario tenga que
         print("El usuario no existe")
     return access
     
-    
-    
-
 def Update(access): #Funcion para que el usuario pueda actualizar sus clave  
     
     if access  == True:
@@ -73,8 +69,7 @@ def Update(access): #Funcion para que el usuario pueda actualizar sus clave
         Users[Userid]["passwordkey"] = NewPassworKey
     while access == False:
         Login()
-
-        
+      
 def Compro(par):
 
     if par == "s" or par =="n":
