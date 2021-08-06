@@ -1,6 +1,6 @@
 Userid = 0
 Users = [{"Userkey": "Prueba", "passwordkey" : "1234" }]
-
+access = False
 def InsertManyUsers(): # Funcion para que las personas puedan ingresear varios usuarios al mismo tiempo
     
     UserCount = input("Cuantos usuarios quieres ingresar: ") # Se le pregunta al usuario cuantos perfiles quiere ingresar
@@ -47,6 +47,7 @@ def InsertUser(): # Funcion para ingresar un unico usuario
     
 def Login(): #Esta es una funcion para el momento en el que el usuario tenga que iniciar sesion
     found = False
+    
     log = input("Ingrese su usuario: ") # Le pedimos a la persona su usuario y nos aseguramos de que exista en la base de datos
     for i in range(len(Users)):
         if Users[i]["Userkey"] == log :
