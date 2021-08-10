@@ -1,9 +1,10 @@
-Userid = 0
-Users = [{"Userkey": "Prueba", "passwordkey" : "1234" }]
+from typing import Dict,List
+Userid: int = 0
+Users :  list[dict]= [{"Userkey": "Prueba", "passwordkey" : "1234" }]
 access = False
-def InsertManyUsers(): # Funcion para que las personas puedan ingresear varios usuarios al mismo tiempo
+def InsertManyUsers() : # Funcion para que las personas puedan ingresear varios usuarios al mismo tiempo
     
-    UserCount = input("Cuantos usuarios quieres ingresar: ") # Se le pregunta al usuario cuantos perfiles quiere ingresar
+    UserCount = int(input("Cuantos usuarios quieres ingresar: ")) # Se le pregunta al usuario cuantos perfiles quiere ingresar
     
     try: #Asegurandose que el usuario solo digite numeros
         UserCount == int(UserCount)
@@ -115,6 +116,7 @@ def run(): #Funcion donde corre el codigo princpal
         Eleccion.lower()
         Compro(Eleccion)
         if Eleccion == "s":
+
             pass
         else:
             exit()
