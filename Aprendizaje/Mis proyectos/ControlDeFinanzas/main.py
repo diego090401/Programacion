@@ -1,10 +1,13 @@
 from typing import Dict,List
+
 from ManejoDeData import ManejoDeDatos
 from FuncLogin import  InsertManyUsers, InsertUser, Login, Update, Compro
+
 Total = 0 
 Userid: int = 0
 Users :  list[dict]= [{"Userkey": "Prueba", "passwordkey" : "1234" }]
 access = False
+
 def run ():
     while True : 
         Eleccion = input("Desea ingresar usuarios ?(s o n) \nEn caso de quere ingresar mas de uno digite sx: ")
