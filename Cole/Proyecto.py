@@ -1,4 +1,3 @@
-
 def i_want_to_sort(Cedula):
     Cedula = [ int(i) for i in list(Cedula) if i != "-"]
     Mayor = max(Cedula)
