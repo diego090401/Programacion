@@ -27,7 +27,7 @@ class DATABASE():
     def ShowUsuarioTable(DATAB= DATAB, cursor=cursor):
         cursor.execute("select username from usuarios")
         RawUsuarioTable =cursor.fetchall()
-        print(RawUsuarioTable)
+        
         return RawUsuarioTable
     def DeleteUser (DATAB= DATAB, cursor=cursor):
         DeleteUser = "delete from usuarios where usuario_id = %s"
